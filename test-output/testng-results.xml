@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="3036" started-at="2018-06-26T18:34:28Z" finished-at="2018-06-26T18:34:31Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="3036" started-at="2018-06-26T18:34:28Z" finished-at="2018-06-26T18:34:31Z">
+      <class name="test.FunctionalTest">
+        <test-method status="PASS" signature="Solution()[pri:0, instance:test.FunctionalTest@ae45eb6]" name="Solution" duration-ms="2992" started-at="2018-06-26T18:34:28Z" finished-at="2018-06-26T18:34:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Solution -->
+      </class> <!-- test.FunctionalTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
