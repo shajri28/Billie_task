@@ -5,7 +5,7 @@
     <classes>
       <class name="test.FunctionalTest">
         <methods>
-          <include name="GetWeatherDetails"/>
+          <include name="Solution"/>
         </methods>
       </class> <!-- test.FunctionalTest -->
     </classes>

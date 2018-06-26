@@ -11,13 +11,15 @@ import org.testng.annotations.Test;
 import io.restassured.RestAssured;
 
 public class FunctionalTest {
-	private final String baseUrl = "http://jsonplaceholder.typicode.com";
+	private final String baseUrl = "https://jsonplaceholder.typicode.com";
 
 	@Test
 	public void Solution() {
 
 		// Specify the base URL to the RESTful web service
+		
 		RestAssured.baseURI = baseUrl;
+		RestAssured.useRelaxedHTTPSValidation();
 		io.restassured.path.json.JsonPath jsonpath = RestAssured.get("/comments?postId=40").body().jsonPath();
          //get the jsonResponse list
 		List<Object> jsonResponse = jsonpath.getList("$");
