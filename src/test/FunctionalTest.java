@@ -8,24 +8,29 @@ import java.util.Map;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+
+
 import io.restassured.RestAssured;
+import io.restassured.path.json.JsonPath;
 
 public class FunctionalTest {
 	private final String baseUrl = "https://jsonplaceholder.typicode.com";
 
 	@Test
 	public void Solution() {
-
+	
 		// Specify the base URL to the RESTful web service
-		
+
 		RestAssured.baseURI = baseUrl;
+		
 		RestAssured.useRelaxedHTTPSValidation();
-		io.restassured.path.json.JsonPath jsonpath = RestAssured.get("/comments?postId=40").body().jsonPath();
-         //get the jsonResponse list
+		
+		JsonPath jsonpath = RestAssured.get("/comments?postId=40").body().jsonPath();
+		// get the jsonResponse list
 		List<Object> jsonResponse = jsonpath.getList("$");
 
 		assertEquals(jsonResponse.size(), 5);
-        // put the elemnts with the corresponding name in a map
+		// put the elemnts with the corresponding name in a map
 		Map<String, String> aMap = jsonpath.getMap("find {it.name == 'pariatur aspernatur nam atque quis'}");
 
 		Assert.assertTrue(aMap.containsKey("id"));
